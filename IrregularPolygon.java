@@ -12,7 +12,7 @@ public class IrregularPolygon{
    }
 
    public void draw(){
-       SketchPad sp = new SketchPad(500, 500);
+       SketchPad sp = new SketchPad(300, 300);
        DrawingTool pen = new DrawingTool(sp);
        pen.move(this.myPolygon.get(0).getX(), myPolygon.get(0).getY());
        pen.down();
@@ -39,6 +39,7 @@ public class IrregularPolygon{
            if(j == this.myPolygon.size()) j = 0;
            area += this.myPolygon.get(i).getX()*this.myPolygon.get(j).getY() - this.myPolygon.get(i).getY()*this.myPolygon.get(j).getX();
        }
+       if(area < 0) area = area*(-1);
        return area/2;
    }
    
