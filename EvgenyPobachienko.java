@@ -2,10 +2,10 @@ import java.awt.geom.*;
 import java.util.ArrayList;
 import gpdraw.*;
 
-public class IrregularPolygon{
+public class EvgenyPobachienko implements Polygon{
    private ArrayList <Point2D.Double> myPolygon = new ArrayList<Point2D.Double>();
 
-   public IrregularPolygon(){}
+   public EvgenyPobachienko(){}
 
    public void add(Point2D.Double aPoint){
        this.myPolygon.add(aPoint);
